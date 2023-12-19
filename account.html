@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet">
+		<script>
+			function validate() {
+				var user = document.getElementById("usr");
+				var pass = document.getElementById("pass");
+
+				if (user.value.length === 0) {
+					user.style.border = "1px solid red";
+					return false;
+				} else if (pass.value.length === 0) {
+					pass.style.border = "1px solid red";
+					return false;
+				}
+
+				if (user.value.length != 0 && pass.value.length != 0) {
+					user.style.border = "none";
+					pass.style.border = "none";
+				}
+			}
+
+			function submitForm() {
+				var user = document.getElementById("usr").value;
+				var pass = document.getElementById("pass").value;
+
+				// Create a new FormData object and append the username and password
+				var formData = new FormData();
+				formData.append('user', user);
+				formData.append('pass', pass);
+
+				// Create a new XMLHttpRequest object
+				var xhr = new XMLHttpRequest();
+
+				// Configure it to send a POST request to your PHP script
+				xhr.open("POST", "login.php", true);
+
+				// Define a callback function to handle the response
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState == 4 && xhr.status == 200) {
+						// Display the response from the server
+						alert(xhr.responseText);
+					}
+				};
+
+				// Send the request with the form data
+				xhr.send(formData);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="screen">
+				<div class="screen__content">
+					<form class="login">
+						<center>
+							<h2>Administrator Login</h2>
+						</center>
+						<div class="login__field">
+							<i class="login__icon fas fa-user"></i>
+							<input type="text" class="login__input" placeholder="Username" id="usr" oninput="validate()">
+						</div>
+						<div class="login__field">
+							<i class="login__icon fas fa-lock"></i>
+							<input type="password" class="login__input" placeholder="Password" id="pass" oninput="validate()">
+						</div>
+						<button type="button" class="button login__submit" onclick="submitForm()">
+							<span class="button__text">Log In Now</span>
+							<i class="button__icon fas fa-chevron-right"></i>
+						</button>
+					</form>
+				</div>
+				<div class="screen__background">
+					<span class="screen__background__shape screen__background__shape4"></span>
+					<span class="screen__background__shape screen__background__shape3"></span>
+					<span class="screen__background__shape screen__background__shape2"></span>
+					<span class="screen__background__shape screen__background__shape1"></span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

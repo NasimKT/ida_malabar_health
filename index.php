@@ -87,6 +87,8 @@
                 <a href="#section_4" class="nav-item nav-link">Motto</a>
                 <a href="#section_5" class="nav-item nav-link">Our Clinics And Hospitals</a>
                 <a href="developer.html" class="nav-item nav-link">Developers</a>
+                <a href="account.html" class="nav-item nav-link">Login</a>
+                <a href="reg.php" class="nav-item nav-link">for Registertion</a>
             </div>
         </div>
     </nav>

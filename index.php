@@ -285,7 +285,7 @@
                     <h5 class="position-relative d-inline-block text-primary text-uppercase">Instruction</h5>
                     <h6>തടസ്സം കൂടാതെ ദന്ത പരിശോധന, ദന്ത ചികിത്സ എന്നിവ ലഭിക്കാൻ മുൻകൂർ ബുക്കിംഗ് നിർബന്ധമാണ്</h6>
                     <h6>Advance booking is mandatory to get hassle-free dental check-up and dental treatment</h6>
-                    <a href="team.html" class="btn btn-primary py-3 px-5">Details Of Our Clinics And Hospitals</a>
+                    <a href="team.php" class="btn btn-primary py-3 px-5">Details Of Our Clinics And Hospitals</a>
                 </div>
             </div>
         </div>

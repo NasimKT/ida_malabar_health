@@ -172,30 +172,91 @@
                 <input type="url" name="web" placeholder="Clinic's website address" class="fname" id="web">
                 <label for="ramp">Ramp available?</label>
                 <p>
-                    <input type="radio" id="rampYes" name="hasRampAccess" value="1">Yes
+                    <input type="radio" id="rampYes" name="hasRampAccess" value="1" checked>Yes
                 </p>
                 <p>
                     <input type="radio" id="rampNo" name="hasRampAccess" value="0">No
                 </p>
-                <label for="ramp">Ground Floor?</label>
+                <label for="ground">Ground Floor?</label>
                 <p>
-                    <input type="radio" id="groundYes" name="hasWheelchairAccess" value="1">Yes
+                    <input type="radio" id="groundYes" name="hasWheelchairAccess" value="1" checked>Yes
                 </p>
                 <p>
                     <input type="radio" id="groundNo" name="hasWheelchairAccess" value="0">No
                 </p>
                 <label for="lift">Lift available?</label>
                 <p>
-                    <input type="radio" id="liftYes" name="hasLiftAccess" value="1">Yes
+                    <input type="radio" id="liftYes" name="hasLiftAccess" value="1" checked>Yes
                 </p>
                 <p>
                     <input type="radio" id="liftNo" name="hasLiftAccess" value="0">No
                 </p>
+
             </div>
             <button type="submit">Submit</button>
         </form>
 
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Function to validate the form
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var socialLinks = document.getElementById('socialLinks').value;
+            var location = document.getElementById('location').value;
+            var web = document.getElementById('web').value;
+            var image = document.getElementById('myFile').value;
+
+            // Check if name, socialLinks, location, web, and image fields are not empty
+            if (name.trim() === '' || socialLinks.trim() === '' || location.trim() === '' || web.trim() === '' || image.trim() === '') {
+                alert('Please fill in all required fields.');
+                return false;
+            }
+
+            // Check if the socialLinks field contains a valid URL
+            var urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+            if (!urlRegex.test(socialLinks)) {
+                alert('Please enter a valid URL for the Google Map Link.');
+                return false;
+            }
+
+            // Check if the web field contains a valid URL
+            if (web.trim() !== '' && !urlRegex.test(web)) {
+                alert('Please enter a valid Clinic\'s website address.');
+                return false;
+            }
+
+            // Check if the image file has a valid extension (you can customize this check further)
+            var allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+            var extension = image.split('.').pop().toLowerCase();
+            if (allowedExtensions.indexOf(extension) === -1) {
+                alert('Please upload a valid image file (jpg, jpeg, png, or gif).');
+                return false;
+            }
+
+            // Check if at least one radio button is selected for each group
+            var hasRampAccess = document.querySelector('input[name="hasRampAccess"]:checked');
+            var hasWheelchairAccess = document.querySelector('input[name="hasWheelchairAccess"]:checked');
+            var hasLiftAccess = document.querySelector('input[name="hasLiftAccess"]:checked');
+
+            if (!hasRampAccess || !hasWheelchairAccess || !hasLiftAccess) {
+                alert('Please select an option for all accessibility features.');
+                return false;
+            }
+
+            return true;
+        }
+
+        // Add form submission event listener
+        document.querySelector('form').addEventListener('submit', function (event) {
+            // Prevent form submission if validation fails
+            if (!validateForm()) {
+                event.preventDefault();
+            }
+        });
+    });
+</script>
+
 </body>
 
 </html>

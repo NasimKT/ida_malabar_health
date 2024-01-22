@@ -111,9 +111,9 @@
         <div class="row py-3">
             <div class="col-12 text-center">
                 <h1 class="display-3 text-white animated zoomIn">Clinics And Hospitals</h1>
-                <a href="index.html" class="h4 text-white">Home</a>
+                <a href="index.php" class="h4 text-white">Home</a>
                 <i class="far fa-circle text-white px-2"></i>
-                <a href="team.html" class="h4 text-white">Clinics And Hospitals</a>
+                <a href="team.php" class="h4 text-white">Clinics And Hospitals</a>
             </div>
         </div>
     </div>

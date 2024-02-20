@@ -1,5 +1,7 @@
 <?php
+session_start();
 include 'db_helper.php';
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $action = $_POST['action'];

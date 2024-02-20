@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>IDA MALABAR CARE</title>
+    <title>ACCESSIBLE CARE HUB</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -74,7 +74,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
         <a href="index.html" class="navbar-brand p-0">
             <img id="logo" src="img/WhatsApp Image 2023-11-20 at 6.26.56 AM.jpeg" alt="logo" />
-            <h1 class="m-0 text-primary"> </i>IDA MALABAR CARE</h1>
+            <h1 class="m-0 text-primary"> </i>ACCESSIBLE CARE HUB</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -87,8 +87,8 @@
                 <a href="#section_4" class="nav-item nav-link">Motto</a>
                 <a href="#section_5" class="nav-item nav-link">Our Clinics And Hospitals</a>
                 <a href="developer.html" class="nav-item nav-link">Developers</a>
-                <a href="account.html" class="nav-item nav-link">Login</a>
-                <a href="reg.php" class="nav-item nav-link">for Registertion</a>
+                <a href="account.php" class="nav-item nav-link">Login</a>
+                <a href="reg.php" class="nav-item nav-link">For Registration</a>
             </div>
         </div>
     </nav>
@@ -185,16 +185,16 @@
                             We acknowledge that oral health is an integral part of general health and well-being.
                             Through various initiatives and campaigns, IDA Malabar branch reaches out to the public to
                             safeguard and promote optimal oral healthcare. Our latest initiative is a first of its kind
-                            website called as IDA MALABAR CARE.</p>
+                            website called as ACCESSIBLE CARE HUB.</p>
                         <div class="row g-3">
                             <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
 
                                 <h1>Mission</h1>
-                                <p>IDA's mission is optimal oral health for all.
+                                <p>Our mission is optimal oral health for all.
 
                                     With this mission in mind, we have come up with a new project targeting differently
                                     abled individuals, especially those who are wheel chair bound and have limited
-                                    access to dental care. IDA MALABAR CARE- Connect with us And Restore your dentition
+                                    access to dental care. ACCESSIBLE CARE HUB- Connect with us And Restore your dentition
                                     is, Is focused to rehabilitate the dentition of such individuals.
 
                                 </p>
@@ -245,9 +245,9 @@
                         <div class="owl-carousel testimonial-carousel rounded p-5 wow zoomIn" data-wow-delay="0.6s">
                             <div class="testimonial-item text-center text-white">
 
-                                <h4 class="text-white mb-0">Motto - IDA MALABAR CARE</h4>
+                                <h4 class="text-white mb-0">Motto - ACCESSIBLE CARE HUB</h4>
                                 <hr class="mx-auto w-25">
-                                <p class="fs-5">IDA MALABAR CARE-Connect with us And Restore your dentition is the brain
+                                <p class="fs-5">ACCESSIBLE CARE HUB-Connect with us And Restore your dentition is the brain
                                     child of our branch focused to deliver dental care to physically challenged
                                     individuals. Through this venture, we aim to provide the link to the wheel chair
                                     friendly dental clinics of our members located in CALICUT.

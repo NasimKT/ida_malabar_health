@@ -14,10 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["admin"] = true;
 
         // Redirect to admin.php
-        header("Location: access.php");
+        header("Location: admin.php");
         exit();
     } else {
         $response = "Login failed. Invalid username or password.";
+        header("Location: invalid.html");
+        exit();
     }
 } else {
     $response = "Invalid request.";

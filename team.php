@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>IDA MALABAR CARE</title>
+    <title>ACCESSIBLE CARE HUB</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -68,7 +68,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
         <a href="index.html" class="navbar-brand p-0">
             <img id="logo" src="img/WhatsApp Image 2023-11-20 at 6.26.56 AM.jpeg" alt="logo" />
-            <h1 class="m-0 text-primary"> </i>IDA MALABAR CARE</h1>
+            <h1 class="m-0 text-primary"> </i>ACCESSIBLE CARE HUB</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>

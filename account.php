@@ -22,22 +22,7 @@
         }
     }
 
-    function submitForm() {
-        var user = document.getElementById("usr").value;
-        var pass = document.getElementById("pass").value;
 
-        // Create a new FormData object and append the username and password
-        var formData = new FormData();
-        formData.append('user', user);
-        formData.append('pass', pass);
-
-        // Change the form action
-        var form = document.querySelector(".login");
-        form.action = "admin.php";
-
-        // Submit the form
-        form.submit();
-    }
     </script>
 
 </head>
@@ -46,20 +31,20 @@
     <div class="container">
         <div class="screen">
             <div class="screen__content">
-                <form class="login" action="admin.php" method="post">
+                <form class="login" action="login.php" method="post">
                     <center>
                         <h2>Administrator Login</h2>
                     </center>
                     <div class="login__field">
                         <i class="login__icon fas fa-user"></i>
-                        <input type="text" class="login__input" placeholder="Username" id="usr" oninput="validate()">
+                        <input type="text" class="login__input" placeholder="Username" id="usr" name="user" oninput="validate()">
                     </div>
                     <div class="login__field">
                         <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" placeholder="Password" id="pass"
+                        <input type="password" class="login__input" placeholder="Password" id="pass" name="pass"
                             oninput="validate()">
                     </div>
-                    <button type="button" class="button login__submit" onclick="submitForm()">
+                    <button type="submit" class="button login__submit">
                         <span class="button__text">Log In Now</span>
                         <i class="button__icon fas fa-chevron-right"></i>
                     </button>

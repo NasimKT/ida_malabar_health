@@ -106,7 +106,6 @@ if ($resultApproved->num_rows > 0) {
         echo "<label style='margin-right: 10px;'><input type='radio' name='hasLiftAccess' value='1' " . ($row['hasLiftAccess'] ? 'checked' : '') . "> Yes</label>";
         echo "<label><input type='radio' name='hasLiftAccess' value='0' " . (!$row['hasLiftAccess'] ? 'checked' : '') . "> No</label>";
 
-        // You can add more input fields for other columns
 
         echo "<label for='imageSrc' style='display: block; margin-top: 10px;'>Image:</label>";
         echo "<input type='text' name='imageSrc' value='" . $row['imageSrc'] . "' style='width: 100%; padding: 8px; margin-bottom: 10px;'>";

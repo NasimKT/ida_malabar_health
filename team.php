@@ -35,6 +35,7 @@
     <!-- Template Stylesheet -->
     <link rel="stylesheet" href="style3.css">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="img/WhatsApp Image 2023-11-20 at 6.26.56 AM.jpeg">
     <style>
     #logo {
         display: block;

@@ -3,6 +3,7 @@
 
 <head>
     <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="img/WhatsApp Image 2023-11-20 at 6.26.56 AM.jpeg">
     <script>
     function validate() {
         var user = document.getElementById("usr");

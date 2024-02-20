@@ -32,6 +32,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="img/WhatsApp Image 2023-11-20 at 6.26.56 AM.jpeg">
     <style>
         #logo {
             display: block;
@@ -79,7 +80,6 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <img style="margin-left: 10%;" id="logo" src="img/emblem.jpg" alt="logo" />
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <a href="#section_1" class="nav-item nav-link active">Home</a>

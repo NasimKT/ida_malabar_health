@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modification Successful</title>
+    <link rel="icon" href="img/WhatsApp Image 2023-11-20 at 6.26.56 AM.jpeg">
+    <style>
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            margin-top: 250px;
+        }
+        h2 {
+            color: rgb(190, 25, 25);
+        }
+        #countdown {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body style="display: flex; flex-direction: column; background-color: #f0f0f0;">
+
+<div class="container">
+    <h2>Invalid credentials!</h2>
+    <div id="countdown"></div>
+</div>
+
+<script>
+    var countdown = 5; // Countdown time in seconds
+
+    function updateCountdown() {
+        document.getElementById('countdown').innerHTML = 'Redirecting in ' + countdown + ' seconds';
+        if (countdown > 0) {
+            countdown--;
+            setTimeout(updateCountdown, 1000);
+        } else {
+            window.location.href = 'register.php'; 
+        }
+    }
+
+    updateCountdown();
+</script>
+
+</body>
+</html>

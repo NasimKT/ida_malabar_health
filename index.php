@@ -87,7 +87,18 @@
                 <a href="#section_4" class="nav-item nav-link">Motto</a>
                 <a href="#section_5" class="nav-item nav-link">Our Clinics And Hospitals</a>
                 <a href="developer.html" class="nav-item nav-link">Developers</a>
-                <a href="account.php" class="nav-item nav-link">Login</a>
+                <a class="nav-item nav-link">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Login
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" type="button" onclick="user()">User Login</button></li>
+                            <li><button class="dropdown-item" type="button" onclick="admin()">Admin Login</button></li>
+                        </ul>
+                    </div>
+                </a>
                 <a href="reg.php" class="nav-item nav-link">For Registration</a>
             </div>
         </div>
@@ -194,7 +205,8 @@
 
                                     With this mission in mind, we have come up with a new project targeting differently
                                     abled individuals, especially those who are wheel chair bound and have limited
-                                    access to dental care. ACCESSIBLE CARE HUB- Connect with us And Restore your dentition
+                                    access to dental care. ACCESSIBLE CARE HUB- Connect with us And Restore your
+                                    dentition
                                     is, Is focused to rehabilitate the dentition of such individuals.
 
                                 </p>
@@ -247,7 +259,8 @@
 
                                 <h4 class="text-white mb-0">Motto - ACCESSIBLE CARE HUB</h4>
                                 <hr class="mx-auto w-25">
-                                <p class="fs-5">ACCESSIBLE CARE HUB-Connect with us And Restore your dentition is the brain
+                                <p class="fs-5">ACCESSIBLE CARE HUB-Connect with us And Restore your dentition is the
+                                    brain
                                     child of our branch focused to deliver dental care to physically challenged
                                     individuals. Through this venture, we aim to provide the link to the wheel chair
                                     friendly dental clinics of our members located in CALICUT.
@@ -319,6 +332,14 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        function user(){
+            window.location.href = 'register.php';
+        }
+        function admin(){
+            window.location.href = 'account.php';
+        }
+    </script>
 </body>
 
 </html>

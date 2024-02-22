@@ -1,24 +1,19 @@
 <?php
-session_start();
-
 include 'db_helper.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user = $_POST['user'];
+    $email = $_POST['email'];
     $pass = $_POST['pass'];
 
-    $sql = "SELECT * FROM admin WHERE username = '$user' AND password = '$pass'";
+    $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$pass'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        $_SESSION["admin"] = true;
-
-        // Redirect to admin.php
-        header("Location: admin.php");
+        header("Location: index.php");
         exit();
     } else {
         $response = "Login failed. Invalid username or password.";
-        header("Location: invalid.html");
+        header("Location: invalid@0.html");
         exit();
     }
 } else {
@@ -26,5 +21,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
-echo $response;
+
 ?>

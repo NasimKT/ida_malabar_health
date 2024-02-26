@@ -65,7 +65,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
+        <a href="index.php" class="navbar-brand p-0">
             <img id="logo" src="img/WhatsApp Image 2023-11-20 at 6.26.56 AM.jpeg" alt="logo" />
             <h1 class="m-0 text-primary"> </i>ACCESSIBLE CARE HUB</h1>
         </a>
@@ -169,7 +169,7 @@
             imageSrc: 'img/16925064628353419011344203829748 - alex vadakkan.jpg',
             socialLinks: ['#'],
             location: 'CHERUVATTA',
-            knowmorelink: 'dentista-master/index.html',
+            knowmorelink: 'dentista-master/index.php',
             hasWheelchairAccess: true,
             hasRampAccess: false,
             hasLiftAccess: false

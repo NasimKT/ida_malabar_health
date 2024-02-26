@@ -1,5 +1,6 @@
 <?php
 include 'db_helper.php';
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
@@ -9,6 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
+        $_SESSION['user'] = true;
         header("Location: index.php");
         exit();
     } else {

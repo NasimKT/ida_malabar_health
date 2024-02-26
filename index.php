@@ -87,19 +87,30 @@
                 <a href="#section_4" class="nav-item nav-link">Motto</a>
                 <a href="#section_5" class="nav-item nav-link">Our Clinics And Hospitals</a>
                 <a href="developer.html" class="nav-item nav-link">Developers</a>
-                <a class="nav-item nav-link">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Login
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><button class="dropdown-item" type="button" onclick="user()">User Login</button></li>
-                            <li><button class="dropdown-item" type="button" onclick="admin()">Admin Login</button></li>
-                        </ul>
-                    </div>
-                </a>
-                <a href="reg.php" class="nav-item nav-link">For Registration</a>
+                <?php 
+                session_start();
+                if(!isset($_SESSION['user'])){
+                    echo '
+                    <a class="nav-item nav-link">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Login
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button" onclick="user()">User Login</button></li>
+                                <li><button class="dropdown-item" type="button" onclick="admin()">Admin Login</button></li>
+                            </ul>
+                        </div>
+                    </a>
+                    ';
+                }
+                else{
+                    echo '
+                    <a href="reg.php" class="nav-item nav-link">For Registration</a>
+                    ';
+                }
+                ?>
             </div>
         </div>
     </nav>

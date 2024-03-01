@@ -46,6 +46,9 @@
             color: #007bff;
             font-size: 150%;
         }
+        #logout{
+            color:#ff3212;
+        }
     </style>
 </head>
 
@@ -108,6 +111,7 @@
                 else{
                     echo '
                     <a href="reg.php" class="nav-item nav-link">For Registration</a>
+                    <a href="logout.php" class="nav-item nav-link" style="color:red;">Logout</a>
                     ';
                 }
                 ?>

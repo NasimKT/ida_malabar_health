@@ -43,6 +43,13 @@
         margin: auto;
 
     }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        transition: 0.2s;
+        color: red;
+    }
     </style>
 </head>
 
@@ -480,7 +487,8 @@
                 <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
                     <h4 class="mb-2">${clinic.name}</h4>
                     <p class="text-primary mb-0">${clinic.location}</p>
-                    <a href="${clinic.knowmorelink}">know more</a>
+                    <a href="${clinic.knowmorelink}">Know More</a>
+                    <a href="book.php">Book</a><br>
                 </div>
             </div>
         </div>
@@ -509,7 +517,8 @@ function createClinicCard(clinic) {
                 <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
                     <h4 class="mb-2">${clinic.name}</h4>
                     <p class="text-primary mb-0">${clinic.location}</p>
-                    <a href="${clinic.knowmorelink}">know more</a>
+                    <a href="${clinic.knowmorelink}">Know More</a><br>
+                    <a href="book.php">Book</a>
                 </div>
             </div>
         </div>

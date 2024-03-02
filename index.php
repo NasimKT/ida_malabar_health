@@ -89,7 +89,6 @@
                 <a href="#section_2" class="nav-item nav-link">About</a>
                 <a href="#section_4" class="nav-item nav-link">Motto</a>
                 <a href="#section_5" class="nav-item nav-link">Our Clinics And Hospitals</a>
-                <a href="developer.html" class="nav-item nav-link">Developers</a>
                 <?php 
                 session_start();
                 if(!isset($_SESSION['user'])){
@@ -110,6 +109,7 @@
                 }
                 else{
                     echo '
+                    <a href="bookings.php" class="nav-item nav-link">Bookings</a>
                     <a href="reg.php" class="nav-item nav-link">For Registration</a>
                     <a href="logout.php" class="nav-item nav-link" style="color:red;">Logout</a>
                     ';

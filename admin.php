@@ -1,4 +1,8 @@
-<?php session_start(); if(!isset($_SESSION['admin'])){ header("Location: account.php"); exit(); } ?>
+<?php session_start();
+if (!isset($_SESSION['admin'])) {
+    header("Location: account.php");
+    exit();
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +13,6 @@
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -94,20 +96,20 @@
                 echo "<th style='border: 1px solid #dddddd; padding: 12px;'>Verified</th>";
                 echo "<th style='border: 1px solid #dddddd; padding: 12px;'>Actions</th>";
                 echo "</tr>";
-            
+
                 while ($row = $resultPending->fetch_assoc()) {
                     echo "<tr style='border: 1px solid #dddddd; text-align: left; padding: 12px;'>";
                     echo "<td>" . $row['id'] . "</td>";
                     echo "<td>" . $row['name'] . "</td>";
                     echo "<td>" . $row['location'] . "</td>";
-                    echo "<td><a href='". $row["socialLinks"] . "' style='text-decoration: none; color: #0066cc;'>Google Map</a></td>";
+                    echo "<td><a href='" . $row["socialLinks"] . "' style='text-decoration: none; color: #0066cc;'>Google Map</a></td>";
                     echo "<td><a href='" . $row['web'] . "' style='text-decoration: none; color: #0066cc;'>About</a></td>";
                     echo "<td>" . ($row['hasWheelChairAccess'] ? 'Yes' : 'No') . "</td>";
                     echo "<td>" . ($row['hasRampAccess'] ? 'Yes' : 'No') . "</td>";
                     echo "<td>" . ($row['hasLiftAccess'] ? 'Yes' : 'No') . "</td>";
                     echo "<td><img src='uploads/" . $row['imageSrc'] . "' alt='Image' style='max-width: 100px;'></td>";
                     echo "<td style='color: " . ($row['verified'] ? '#4CAF50' : 'red') . ";'>" . ($row['verified'] ? 'Yes' : 'No') . "</td>";
-            
+
                     // Conditionally display buttons based on verification status
                     if (!$row['verified']) {
                         echo "<td>";
@@ -121,12 +123,12 @@
                     }
                     echo "</tr>";
                 }
-            
+
                 echo "</table>";
             } else {
                 echo "No unverified registrations found.";
             }
-            
+
 
             ?>
         </div>
@@ -140,29 +142,29 @@
             if ($resultApproved->num_rows > 0) {
                 echo "<h2>Registration Data:</h2>";
                 echo "<table style='border-collapse: collapse; width: 100%; margin-top: 20px; border: 1px solid #dddddd;'>";
-    echo "<tr style='background-color: #f2f2f2;'>";
-    echo "<th style='border: 1px solid #dddddd; padding: 8px;'>ID</th><th style='border: 1px solid #dddddd; padding: 8px;'>Name</th><th style='border: 1px solid #dddddd; padding: 8px;'>Location</th><th style='border: 1px solid #dddddd; padding: 8px;'>Website</th><th style='border: 1px solid #dddddd; padding: 8px;'>About</th><th style='border: 1px solid #dddddd; padding: 8px;'>Ground Floor</th><th style='border: 1px solid #dddddd; padding: 8px;'>Ramp Access</th><th style='border: 1px solid #dddddd; padding: 8px;'>Lift Access</th><th style='border: 1px solid #dddddd; padding: 8px;'>Image</th>";
-    echo "</tr>";
+                echo "<tr style='background-color: #f2f2f2;'>";
+                echo "<th style='border: 1px solid #dddddd; padding: 8px;'>ID</th><th style='border: 1px solid #dddddd; padding: 8px;'>Name</th><th style='border: 1px solid #dddddd; padding: 8px;'>Location</th><th style='border: 1px solid #dddddd; padding: 8px;'>Website</th><th style='border: 1px solid #dddddd; padding: 8px;'>About</th><th style='border: 1px solid #dddddd; padding: 8px;'>Ground Floor</th><th style='border: 1px solid #dddddd; padding: 8px;'>Ramp Access</th><th style='border: 1px solid #dddddd; padding: 8px;'>Lift Access</th><th style='border: 1px solid #dddddd; padding: 8px;'>Image</th>";
+                echo "</tr>";
 
-    while ($row = $resultApproved->fetch_assoc()) {
-        echo "<tr style='border: 1px solid #dddddd; text-align: left; padding: 8px;'>";
-        echo "<td style='border: 1px solid #dddddd; padding: 8px;'>" . $row['id'] . "</td>";
-        echo "<td style='border: 1px solid #dddddd; padding: 8px;'>" . $row['name'] . "</td>";
-        echo "<td style='border: 1px solid #dddddd; padding: 8px;'>" . $row['location'] . "</td>";
-        echo "<td style='border: 1px solid #dddddd; padding: 8px;'><a href='". $row["socialLinks"] . "' style='text-decoration: none; color: #0066cc;'>Google Map</a></td>";
-        echo "<td style='border: 1px solid #dddddd; padding: 8px;'><a href='" . $row['knowmorelink'] . "' style='text-decoration: none; color: #0066cc;'>About</a></td>";
-        echo "<td style='border: 1px solid #dddddd; padding: 8px;'>" . ($row['hasWheelchairAccess'] ? 'Yes' : 'No') . "</td>";
-        echo "<td style='border: 1px solid #dddddd; padding: 8px;'>" . ($row['hasRampAccess'] ? 'Yes' : 'No') . "</td>";
-        echo "<td style='border: 1px solid #dddddd; padding: 8px;'>" . ($row['hasLiftAccess'] ? 'Yes' : 'No') . "</td>";
-        echo "<td style='border: 1px solid #dddddd; padding: 8px;'><img src='uploads/" . $row['imageSrc'] . "' alt='Image' style='max-width: 100px;'></td>";
-        echo "</tr>";
-    }
+                while ($row = $resultApproved->fetch_assoc()) {
+                    echo "<tr style='border: 1px solid #dddddd; text-align: left; padding: 8px;'>";
+                    echo "<td style='border: 1px solid #dddddd; padding: 8px;'>" . $row['id'] . "</td>";
+                    echo "<td style='border: 1px solid #dddddd; padding: 8px;'>" . $row['name'] . "</td>";
+                    echo "<td style='border: 1px solid #dddddd; padding: 8px;'>" . $row['location'] . "</td>";
+                    echo "<td style='border: 1px solid #dddddd; padding: 8px;'><a href='" . $row["socialLinks"] . "' style='text-decoration: none; color: #0066cc;'>Google Map</a></td>";
+                    echo "<td style='border: 1px solid #dddddd; padding: 8px;'><a href='" . $row['knowmorelink'] . "' style='text-decoration: none; color: #0066cc;'>About</a></td>";
+                    echo "<td style='border: 1px solid #dddddd; padding: 8px;'>" . ($row['hasWheelchairAccess'] ? 'Yes' : 'No') . "</td>";
+                    echo "<td style='border: 1px solid #dddddd; padding: 8px;'>" . ($row['hasRampAccess'] ? 'Yes' : 'No') . "</td>";
+                    echo "<td style='border: 1px solid #dddddd; padding: 8px;'>" . ($row['hasLiftAccess'] ? 'Yes' : 'No') . "</td>";
+                    echo "<td style='border: 1px solid #dddddd; padding: 8px;'><img src='uploads/" . $row['imageSrc'] . "' alt='Image' style='max-width: 100px;'></td>";
+                    echo "</tr>";
+                }
 
-    echo "</table>";
+                echo "</table>";
             } else {
                 echo "No records found.";
             }
-            
+
             ?>
         </div>
         <script>

@@ -86,7 +86,6 @@
                 <a href="index.php" class="nav-item nav-link">About</a>
                 <a href="index.php" class="nav-item nav-link">Motto</a>
                 <a href="index.php" class="nav-item nav-link">Our Clinics And Hospitals</a>
-                <a href="developer.html" class="nav-item nav-link">Developers</a>
             </div>
         </div>
     </nav>
@@ -498,7 +497,7 @@
 
 
 
-    // Modify the createClinicCard function to use the fields from the fetched data
+    /*
 function createClinicCard(clinic) {
     const card = document.createElement('div');
     card.classList.add('col-lg-4', 'wow', 'slideInUp');
@@ -524,7 +523,7 @@ function createClinicCard(clinic) {
         </div>
     `;
     return card;
-}
+}*/
 
 // Modify the fetchData function to handle the new table structure
 async function fetchData() {

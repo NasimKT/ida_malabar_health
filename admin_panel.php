@@ -2,7 +2,6 @@
 session_start();
 include 'db_helper.php';
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $action = $_POST['action'];
 
@@ -22,16 +21,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($conn->query($updateSql) === TRUE) {
                 // Insert the verified data into the approved_registrations table
-                $insertSql = "INSERT INTO approved_registrations (name, imageSrc, socialLinks, location, knowmorelink, hasWheelchairAccess, hasRampAccess, hasLiftAccess) 
+                $insertSql = "INSERT INTO approved_registrations (name, imageSrc, socialLinks, location, knowmorelink, hasRampAccess, hasLiftAccess, hasWheelchairAccess) 
                               VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             
                 $stmt = $conn->prepare($insertSql);
             
                 // Assuming your data types are: string, string, string, string, string, int, int, int
-                $stmt->bind_param('sssssiib', $row['name'], $row['imageSrc'], $row['socialLinks'], $row['location'], $row['knowmorelink'], $row['hasWheelchairAccess'], $row['hasRampAccess'], $row['hasLiftAccess']);
+                $stmt->bind_param('sssssiii', $row['name'], $row['imageSrc'], $row['socialLinks'], $row['location'], $row['web'], $row['hasRampAccess'], $row['hasLiftAccess'], $row['hasWheelChairAccess']);
             
                 if ($stmt->execute()) {
-                    $response = "Registration verified and moved to approved_registrations successfully.";
+                    $response = "Registration verified successfully.";
                 } else {
                     $response = "Error moving registration to approved_registrations: " . $stmt->error;
                 }
@@ -44,8 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $response = "Registration not found.";
         }
-    } else {
-        $response = "Invalid action.";
     }
 } else {
     $response = "Invalid request.";
@@ -66,8 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $response = "Error discarding registration: " . $conn->error;
         }
-    } else {
-        $response = "Invalid action.";
     }
 } else {
     $response = "Invalid request.";
